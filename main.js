@@ -57,7 +57,18 @@ function displayList(array = []){
 
         item_element.appendChild(title);
 
+
+        let meta = document.createElement('div');
+        meta.classList.add('item-meta');
+        meta.innerText = item.meta;
+        item_element.appendChild(meta);
+
+        let age = document.createElement('div');
+        age.classList.add('item-age');
+        age.innerText = item.age;
+        item_element.appendChild(age);
+
         list.appendChild(item_element)
     }
 }
-displayList(list_items)
+displayList(list_items);
